@@ -12,15 +12,17 @@ function fnBrowserDetect(){
             browserName = "Firefox";
         } else if (/chrome|gsa|crios/i.test(userAgent)){
             browserName = "Google Chrome";
-        } else if(/safari/i.test(userAgent)){
+        } else if(/edg/i.test(userAgent)){
+            browserName = "Microsoft Edge";
+        }else if(/safari/i.test(userAgent)){
             browserName = "Safari";
-        } else {
+        }else {
             browserName="Кто ты монстр ?:)";
         }
     } else {
-        if(/chrome.*opr|opera/i.test(userAgent)){
+        if(/opr|opera/i.test(userAgent)){
         browserName = "Opera";
-      } else if(/chrome.*edg/i.test(userAgent)){
+      } else if(/edg/i.test(userAgent)){
         browserName = "Microsoft Edge";
       } else if(/firefox/i.test(userAgent)){
         browserName = "Firefox";
