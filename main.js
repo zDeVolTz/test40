@@ -18,7 +18,8 @@ function fnBrowserDetect(){
         browserName="Кто ты монстр :)";
       }
     
-     document.querySelector("h1").innerText="You are using "+ browserName +" browser";         
+     document.querySelector(".h1").innerText="You are using "+ browserName +" browser"; 
+     document.querySelector(".h2").innerText= "" + userAgent + "";
 }
 
 fnBrowserDetect()
