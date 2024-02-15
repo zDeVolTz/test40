@@ -9,7 +9,7 @@ function fnBrowserDetect(){
         if(/opera|opt|opr/i.test(userAgent)){
             browserName = "Opera";
         } else if (/firefox|fxios/i.test(userAgent)){
-            browserName = "Firefox I";
+            browserName = "Firefox";
         } else if (/chrome|gsa/i.test(userAgent)){
             browserName = "Google Chrome";
         } else if(/safari/i.test(userAgent)){
