@@ -17,8 +17,8 @@ function fnBrowserDetect(){
         } else {
             browserName="Кто ты монстр ?:)";
         }
-    }
-    if(/chrome.*opr|opera/i.test(userAgent)){
+    } else {
+        if(/chrome.*opr|opera/i.test(userAgent)){
         browserName = "Opera";
       } else if(/chrome.*edg/i.test(userAgent)){
         browserName = "Microsoft Edge";
@@ -29,7 +29,7 @@ function fnBrowserDetect(){
       } else {
         browserName="Кто ты монстр ?:)";
       }
-    
+    }
      document.querySelector(".h1").innerText="You are using "+ browserName +" browser"; 
      document.querySelector(".h2").innerText= "" + userAgent + "";
 }
