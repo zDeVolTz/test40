@@ -7,7 +7,7 @@ function fnBrowserDetect(){
         browserName = "Opera";
       } else if(/chrome.*edg/i.test(userAgent)){
         browserName = "Microsoft Edge";
-      } else if(/chrome|chromium|crios/i.test(userAgent)){
+      } else if(/chrome|mac.*chrome/i.test(userAgent)){
         browserName = "Google Chrome";
       } else if(/firefox/i.test(userAgent)){
         browserName = "Firefox";
