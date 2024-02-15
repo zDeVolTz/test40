@@ -2,37 +2,25 @@ function fnBrowserDetect(){
                  
     let userAgent = navigator.userAgent;
     let browserName;
+    let browserVersion;
+
+
     
-
-
-    if(/mac/i.test(userAgent)){
-        if(/opera|opt|opr/i.test(userAgent)){
-            browserName = "Opera";
-        } else if (/firefox|fxios/i.test(userAgent)){
-            browserName = "Firefox";
-        } else if (/chrome|gsa|crios/i.test(userAgent)){
-            browserName = "Google Chrome";
-        } else if(/edg/i.test(userAgent)){
-            browserName = "Microsoft Edge";
-        }else if(/safari/i.test(userAgent)){
-            browserName = "Safari";
-        }else {
-            browserName="Кто ты монстр ?:)";
-        }
-    } else {
-        if(/opr|opera/i.test(userAgent)){
+        if(/opr|opera|mac.*opt/i.test(userAgent)){
         browserName = "Opera";
-      } else if(/edg/i.test(userAgent)){
+        } else if(/edg/i.test(userAgent)){
         browserName = "Microsoft Edge";
-      } else if(/firefox/i.test(userAgent)){
+        } else if(/firefox|mac.*fxios/i.test(userAgent)){
         browserName = "Firefox";
-      } else if(/chrome/i.test(userAgent)){
+        } else if(/chrome|mac.*gsa|mac.*crios/i.test(userAgent)){
         browserName = "Google Chrome";
-      } else {
-        browserName="Кто ты монстр ?:)";
-      }
-    }
-     document.querySelector(".h1").innerText="You are using "+ browserName +" browser"; 
+        } else if(/safari/i.test(userAgent)){
+        browserName = "Safari";
+        } else {
+        browserName="Хто ти монстр ?:)";
+        }
+  
+     document.querySelector(".h1").innerText="Ви використовуєте" + browserName + " браузер"; 
      document.querySelector(".h2").innerText= "" + userAgent + "";
 }
 
