@@ -1,3 +1,9 @@
+let nameBrowser = document.querySelector(".titleBrowser") 
+let verBrowser = document.querySelector(".verBrowser")
+
+fnBrowserDetect()
+
+
 function fnBrowserDetect(){
                  
     let userAgent = navigator.userAgent;
@@ -46,16 +52,15 @@ function fnBrowserDetect(){
         } else {
         browserName= brouwserList.default;
         }
+
         let foundEntry = Object.entries(brouwserList).find(([key, value]) => value.value === browserName);
         browserVersion = getVersionBrowser(userAgent,foundEntry);
-     document.querySelector(".h1").innerText="Ви використовуєте" + browserName + " браузер"; 
-     document.querySelector(".h2").innerText= "Версия браузера " + browserVersion + "";
-     document.querySelector(".h3").innerText= "Версия браузера " + userAgent + "";
+        nameBrowser.textContent = `Ваш браузер : ${browserName}`;
+        verBrowser.textContent = `Ваша версія : ${browserVersion}`;
 }
 
 function getVersionBrowser(userAgent,foundEntry){
-    let resutlt = userAgent.match(foundEntry[1].regVersion);
-    return resutlt[1];
+    let result = userAgent.match(foundEntry[1].regVersion);
+    return result[1];
 }
 
-fnBrowserDetect()
